@@ -131,6 +131,16 @@
 			 keywords.Add("data", (int)PTokens.DATA);
 			 keywords.Add("float", (int)PTokens.FLOAT);
 			 keywords.Add("interface", (int)PTokens.INTERFACE);
+
+             keywords.Add("qmachine", (int)PTokens.QMACHINE);
+             keywords.Add("topic", (int)PTokens.TOPIC);
+             keywords.Add("atleastnew", (int)PTokens.ATLEASTNEW);
+             keywords.Add("atmostlose", (int)PTokens.ATMOSTLOSE);
+             keywords.Add("publish", (int)PTokens.PUBLISH);
+             keywords.Add("read", (int)PTokens.READ);
+             keywords.Add("publishes", (int)PTokens.PUBLISHES);
+             keywords.Add("subscribes", (int)PTokens.SUBSCRIBES);
+             keywords.Add("topic", (int)PTokens.PERIOD);
 		 }
 
          int GetIdToken(string txt)
