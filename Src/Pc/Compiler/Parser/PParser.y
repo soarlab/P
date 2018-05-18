@@ -143,6 +143,7 @@ SpecMachineDecl
 
 ImplMachineNameDecl
 	: MACHINE ID { SetMachine(P_Root.UserCnstKind.REAL, $2.str, ToSpan(@2), ToSpan(@1)); } MachCardOrNone
+    | QMACHINE ID { SetMachine(P_Root.UserCnstKind.REAL, $2.str, ToSpan(@2), ToSpan(@1)); } MachCardOrNone
 	;
 
 SpecMachineNameDecl
@@ -334,6 +335,7 @@ Type
 	| FLOAT                                 { PushTypeExpr(MkBaseType(P_Root.UserCnstKind.FLOAT,     ToSpan(@1))); }
 	| EVENT                                 { PushTypeExpr(MkBaseType(P_Root.UserCnstKind.EVENT,   ToSpan(@1))); }
 	| MACHINE                               { PushTypeExpr(MkBaseType(P_Root.UserCnstKind.MACHINE, ToSpan(@1))); }	
+    | QMACHINE                              { PushTypeExpr(MkBaseType(P_Root.UserCnstKind.MACHINE, ToSpan(@1))); }
 	| DATA									{ PushDataType(ToSpan(@1)); }
 	| ANY                                   { PushAnyWithPerm(ToSpan(@1)); }
 	| ANY LT ID GT							{ PushAnyWithPerm(ToSpan(@1), $3.str, ToSpan(@3)); }
