@@ -140,7 +140,7 @@
              keywords.Add("read", (int)PTokens.READ);
              keywords.Add("publishes", (int)PTokens.PUBLISHES);
              keywords.Add("subscribes", (int)PTokens.SUBSCRIBES);
-             keywords.Add("topic", (int)PTokens.PERIOD);
+             keywords.Add("period", (int)PTokens.PERIOD);
 		 }
 
          int GetIdToken(string txt)
